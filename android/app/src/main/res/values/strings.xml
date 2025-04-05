@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">EcoVis</string>
+    <string name="title_activity_main">EcoVis</string>
+    <string name="package_name">com.dardecode.ecovis</string>
+    <string name="custom_url_scheme">com.dardecode.ecovis</string>
+</resources>

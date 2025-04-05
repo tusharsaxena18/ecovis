@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from PIL import Image
 import io
 import logging
+from fastapi.middleware.cors import CORSMiddleware
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -16,7 +17,7 @@ MODEL_PATH = "ecovis.pth"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Define class names (replace with your actual class names)
-class_names = ["biological", "metal", "paper", "plastic", "trash", "white-glass"]
+class_names = ["Biological", "Metal", "Paper", "Plastic", "Trash", "Glass"]
 num_classes = len(class_names)
 
 class CNN(nn.Module):
@@ -64,6 +65,14 @@ except Exception as e:
 
 # FastAPI app
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or restrict to specific IPs
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class PredictionResponse(BaseModel):
     prediction: str
