@@ -39,4 +39,4 @@ An innovative app that empowers citizens to report and reduce urban waste throug
 
 ## 📞 Contact
 
-For inquiries, please reach out to [tusharsaxena1203@gmail.com](mailto:tusharsaxena1203@gmail.com).
+For inquiries, please reach out to [tusharsaxena1203@gmail.com](mailto:tusharsaxena1203@gmail.com) or [yuvika.miglani@gmail.com](mailto:yuvika.miglani@gmail.com).
